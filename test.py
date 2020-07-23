@@ -1,4 +1,5 @@
-from errorCatcherForStatements import errorCatcherForStatements
+from errorCatcherForStatements import FindLines
+#from averageCalc import averageCalc
 
 def main():
     choice = -1
@@ -7,7 +8,10 @@ def main():
         choice = int(input("Enter 1 to search a keyword, \nEnter 0 to Exit: "))
         if choice == 1:
             keyword = input("Enter a keyword to search statements: ")
-            errorCatcherForStatements(keyword)
+            sl = FindLines(keyword)
+            sl.searchKeyWord()
+            #sl.searchKeyWord()
+            #print(search.searchKeyWord())
         else:
             exit(0)
 
