@@ -15,9 +15,9 @@ class FindLines:
 
         for x in statments1:
             if str(checkKeyWord).lower() in x.lower(): #searches for user key word and converts it to a string
-                val = re.search("[$]\d*[.]\d{2}", x)
-                cutMoneySign = val.group().split('$') #returns an array of re.search - $ sign
-                value = float(cutMoneySign[1]) #converts the reg exp to an int
+                val = re.search('[$]\d*[,]*\d*[.]\d{2}', x)
+                cutMoneySign = val.group().replace('$', '').replace(',', '') #returns an array of re.search - $ sign
+                value = float(cutMoneySign) #converts the reg exp to an int
                 total += value
                 count += 1
                 print(x.strip())
