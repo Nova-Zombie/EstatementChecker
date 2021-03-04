@@ -10,6 +10,7 @@ def main():
             keyword = input("Enter a keyword to search statements: ")
             sl = FindLines(keyword)
             sl.searchKeyWord()
+            sl.averageIncomePerMonth()
             #sl.searchKeyWord()
             #print(search.searchKeyWord())
         else:
